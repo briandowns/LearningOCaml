@@ -1,3 +1,4 @@
+(* let lessons *)
 let x = 1;;
 Printf.printf "%d\n" x;;
 let x = "I am a string now";;
@@ -17,3 +18,5 @@ let up = Cha.uppercase in
     big_xy = List.map up xy ;
     big_ab = List.map up ab ;
     big_ab @ big_xy;;
+
+
