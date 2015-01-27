@@ -81,8 +81,8 @@ let head_partial = function
 Printf.printf "%s\n" (head_partial ["A"; "B"; "C"])
 
 let head = function
-    | [] -> failwith "empty list"
+    | []   -> failwith "empty list"
     | h::_ -> h
-    | [h] -> h;;
+    | [h]  -> h;;
 
 Printf.printf "%s\n" (head_partial ["A"; "B"; "C"])
