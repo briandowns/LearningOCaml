@@ -19,3 +19,6 @@ Printf.printf "%s\n" (List.hd l2);;
 let speak elem =
         Printf.printf "%s\n" elem in
         List.iter speak l2;;
+
+(* fold example *)
+List.fold_left (fun x y -> x + y) 0 [9; 8; 7; 6; 5; 4; 3; 2; 1];;
