@@ -11,6 +11,7 @@ let func3 first last = "Hello " ^ first ^ last;;
 
 let answer1 = func2 200;;
 let answer2 = func3 "John" "Smith";;
+let is_even x = ((x mod 2) == 0);;
 
 printf "func1: %d\n" func1;;
 printf "func2: %d\n" answer1;;
