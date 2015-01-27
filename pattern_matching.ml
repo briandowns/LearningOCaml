@@ -63,4 +63,26 @@ let head_head = function
 Printf.printf "%s\n" (head_head [["yo"; "ya"; "ye"]; ["Hola"]; ["Hello"]]);;
 
 (* pattern-matching arrays *)
+let has_size_two = function
+    | [| _; _ |] -> true
+    | _          -> false;;
 
+Printf.printf "%B\n" (has_size_two [| 1; 4; 6 |])
+
+let f = function
+    | [] -> failwith "empty list"
+    | [| _; (_, x) |]::_ -> x
+    | _ -> failwith "the first array should be of size two";;
+
+(* exhaustiveness *)
+let head_partial = function
+    | h::_ -> h;;
+
+Printf.printf "%s\n" (head_partial ["A"; "B"; "C"])
+
+let head = function
+    | [] -> failwith "empty list"
+    | h::_ -> h
+    | [h] -> h;;
+
+Printf.printf "%s\n" (head_partial ["A"; "B"; "C"])
